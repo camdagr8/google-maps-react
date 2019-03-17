@@ -117,9 +117,11 @@ export class Map extends React.Component {
 
   componentWillUnmount() {
     const {google} = this.props;
+    /*
     if (this.geoPromise) {
       this.geoPromise.cancel();
     }
+    */
     Object.keys(this.listeners).forEach(e => {
       google.maps.event.removeListener(this.listeners[e]);
     });
